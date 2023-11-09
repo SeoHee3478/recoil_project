@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import "./App.css";
 import Page from "./components/Page";
+import { RecoilRoot } from "recoil";
 
 function App() {
-  const [isDark, setIsDark] = useState(false);
-  return <Page isDark={isDark} toggleThema={() => setIsDark(!isDark)} />;
+  return (
+    <RecoilRoot>
+      <Page />
+    </RecoilRoot>
+  );
 }
 
 export default App;
